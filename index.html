@@ -111,6 +111,11 @@
         // Função que calcula valor1 - valor2 e aplica a porcentagem escolhida no resultado
         function calcular() {
             // Obtém os valores dos inputs
+	    let valor = document.getElementById(calcular).value;
+		valor = valor.replace(',', '.').replace(/[^0-9.]/g, '');
+
+            return parseFloat(valor);
+	}
             let valor1 = parseFloat(document.getElementById("valor1").value);
             let valor2 = parseFloat(document.getElementById("valor2").value);
 
